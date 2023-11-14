@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
+import About from './About';
 import './App.css';
 
 function App() {
@@ -8,9 +9,14 @@ function App() {
 
   return (
     <>
-      <h1>This is my stocks app!</h1>
+      <nav>
+        <Link to="/">iStocks</Link>
+        <Link to="/about">About</Link>
+      </nav>
+      <h1>iStocks</h1>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   )
